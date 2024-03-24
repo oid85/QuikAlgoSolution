@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29865E49-EBB6-4EF5-89F2-81EDDD80B035}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlgoSolution.GraphControls</RootNamespace>
+    <AssemblyName>AlgoSolution.GraphControls</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DrawdownChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawdownChart.Designer.cs">
+      <DependentUpon>DrawdownChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionsChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PositionsChart.Designer.cs">
+      <DependentUpon>PositionsChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquityChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquityChart.Designer.cs">
+      <DependentUpon>EquityChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandlesChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CandlesChart.Designer.cs">
+      <DependentUpon>CandlesChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDrawable.cs" />
+    <Compile Include="PerformanceTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PerformanceTable.Designer.cs">
+      <DependentUpon>PerformanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DrawdownChart.resx">
+      <DependentUpon>DrawdownChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionsChart.resx">
+      <DependentUpon>PositionsChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquityChart.resx">
+      <DependentUpon>EquityChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandlesChart.resx">
+      <DependentUpon>CandlesChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceTable.resx">
+      <DependentUpon>PerformanceTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlgoSolution.Algorithms\AlgoSolution.Algorithms.csproj">
+      <Project>{38327DED-2B20-402A-AA3B-224F16F627A0}</Project>
+      <Name>AlgoSolution.Algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlgoSolution.Models\AlgoSolution.Models.csproj">
+      <Project>{47c4360b-d1a7-4a1e-8e11-867c940460d9}</Project>
+      <Name>AlgoSolution.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
